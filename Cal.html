@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Calcuator Starter App</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="calculator.js"></script>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+  <h1 id="header">Calculator App</h1>
+  <form>
+    <p>
+      <input type="text" id="screen" maxlength="10"> </p>
+    <p>
+      <button class="btn btn-danger btn-lg" type="button" onclick="allClear()">AC</button>
+      <button class="btn btn-warning btn-lg" type="button" onclick="mc()">mc</button>
+      <button class="btn btn-warning btn-lg" type="button" onclick="mPlus()">m+</button>
+      <button class="btn btn-warning btn-lg" type="button" onclick="mMinus()">m-</button>
+      <button class="btn btn-warning btn-lg" type="button" onclick="mr()">mr</button>
+    </p>
+    <p>
+      <button class="btn btn-danger btn-lg" type="button" onclick="clearCurrent()">C</button>
+      <button class="btn btn-primary btn-lg" type="button" onclick="cosineDegrees()">cos&deg;</button>
+      <button class="btn btn-primary btn-lg" type="button" onclick="sineDegrees()">sin&deg;</button>
+      <button class="btn btn-primary btn-lg" type="button" onclick="tangentDegrees()">tan&deg;</button>
+      <button class="btn btn-info btn-lg" type="button" onclick="storeOperator('^')">x^</button>
+    </p>
+    <p>
+      <button class="btn btn-danger btn-lg" type="button" onclick="percentage()">%</button>
+      <button class="btn btn-primary btn-lg" type="button" onclick="cosine()">cos</button>
+      <button class="btn btn-primary btn-lg" type="button" onclick="sine()">sin</button>
+      <button class="btn btn-primary btn-lg" type="button" onclick="tangent()">tan</button>
+      <button class="btn btn-info btn-lg" type="button" onclick="storeOperator('/')">/</button>
+    </p>
+    <p>
+      <button class="btn btn-danger btn-lg" type="button" onclick="inverse()">1/x</button>
+      <button class="btn btn-success btn-lg" type="button" onclick="addDigit('7')">7</button>
+      <button class="btn btn-success btn-lg" type="button" onclick="addDigit('8')">8</button>
+      <button class="btn btn-success btn-lg" type="button" onclick="addDigit('9')">9</button>
+      <button class="btn btn-info btn-lg" type="button" onclick="storeOperator('*')">*</button>
+    </p>
+    <p>
+      <button class="btn btn-danger btn-lg" type="button" onclick="square()">x<sup>2</sup></button>
+      <button class="btn btn-success btn-lg" type="button" onclick="addDigit('4')">4</button>
+      <button class="btn btn-success btn-lg" type="button" onclick="addDigit('5')">5</button>
+      <button class="btn btn-success btn-lg" type="button" onclick="addDigit('6')">6</button>
+      <button class="btn btn-info btn-lg" type="button" onclick="storeOperator('-')">-</button>
+    </p>
+    <p>
+      <button class="btn btn-danger btn-lg" type="button" onclick="factorial()">x!</button>
+      <button class="btn btn-success btn-lg" type="button" onclick="addDigit('1')">1</button>
+      <button class="btn btn-success btn-lg" type="button" onclick="addDigit('2')">2</button>
+      <button class="btn btn-success btn-lg" type="button" onclick="addDigit('3')">3</button>
+      <button class="btn btn-info btn-lg" type="button" onclick="storeOperator('+')">+</button>
+    </p>
+    <p>
+      <button class="btn btn-danger btn-lg" type="button" onclick="squareRoot()">&radic;x</button>
+      <button class="btn btn-danger btn-lg" type="button" onclick="addDecimal()">.</button>
+      <button class="btn btn-success btn-lg" type="button" onclick="addDigit('0')">0</button>
+      <button class="btn btn-info btn-lg" type="button" onclick="changeSign()">+/-</button>
+      <button class="btn btn-info btn-lg" type="button" onclick="calculate()">=</button>
+    </p>
+  </form>

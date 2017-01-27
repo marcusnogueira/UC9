@@ -1,0 +1,23 @@
+html {
+    font-family: Open Sans, sans-serif;
+    text-align: center;
+}
+
+button {
+    width: 7.5%;
+    height: 50px;
+    text-decoration: none;
+    border-color: black;
+    border-width: 1px;
+    font-size: 200px;
+}
+
+#screen {
+    width: 40%;
+    padding: 12px 20px;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 8px;
+    font-size: 150%;
+    text-align: right;
+}
