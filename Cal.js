@@ -67,7 +67,6 @@ function calculate() {
     displayCurrentInput();
 }
 
-// Change the sign of the current input
 function changeSign() {
     currentInput = currentInput * -1;
     displayCurrentInput();
@@ -173,7 +172,7 @@ function mr() {
     displayCurrentInput();
 }
 
-function ChangeSign
-    cuurentinput = (currentInput * -1 );
-    displayCurrentInput ();
+function changeSign() {
+    currentInput = currentInput * -1;
+    displayCurrentInput();
 }
