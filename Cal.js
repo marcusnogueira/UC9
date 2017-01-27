@@ -2,12 +2,20 @@ var currentInput = "0";
 var memory = "0";
 var operator = 0;
 
-// Helper function for displaying the current input
+
+/**
+ * [[This is a helper function for displaying the current input
+ */
+
 function displayCurrentInput() {
     document.getElementById('screen').value = currentInput;
 }
 
-// Adds a digit to the current input
+
+/**
+ * @param {function} dig [[This function is used to add the digit to the display
+ */
+
 function addDigit(dig) {
     if (currentInput.length == 30) {
         currentInput = currentInput;
