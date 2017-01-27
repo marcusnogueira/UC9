@@ -172,4 +172,3 @@ function mr() {
     currentInput = memory;
     displayCurrentInput();
 }
-
