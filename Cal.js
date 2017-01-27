@@ -172,3 +172,8 @@ function mr() {
     currentInput = memory;
     displayCurrentInput();
 }
+
+function ChangeSign
+    cuurentinput = (currentInput * -1 );
+    displayCurrentInput ();
+}
