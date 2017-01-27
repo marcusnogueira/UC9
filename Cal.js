@@ -27,7 +27,10 @@ function addDigit(dig) {
     displayCurrentInput();
 }
 
-// Adds a decimal to the current input
+/**
+ * [[This function adds the decimal to the current input ]]
+ */
+
 function addDecimal() {
     if (currentInput.length == 0) {
         //no leading ".", use "0."
@@ -41,7 +44,11 @@ function addDecimal() {
     displayCurrentInput();
 }
 
-// Clears everything.
+
+/**
+ * [[The function clears the current display,memory and operator]]
+ */
+
 function allClear() {
     currentInput = "0";
     operator = 0;                //clear operator
@@ -63,6 +70,7 @@ function storeOperator(op) {
 }
 
 // Calculate using operator, the memory and what is current
+
 function calculate() {
     if (operator == 1) { currentInput = eval(memory) * eval(currentInput); };
     if (operator == 2 && currentInput == 0) { currentInput = "ERROR: Divide by 0"; } else if (operator == 2) { currentInput = eval(memory) / eval(currentInput); };
