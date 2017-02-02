@@ -13,7 +13,7 @@ function displayCurrentInput() {
 
 
 /**
- * @param {function} dig [[This function is used to add the digit to the display
+ * @param {function} dig This function is used to add the digit to the display
  */
 
 function addDigit(dig) {
@@ -28,7 +28,7 @@ function addDigit(dig) {
 }
 
 /**
- * [[This function adds the decimal to the current input ]]
+ * This function adds the decimal to the current input
  */
 
 function addDecimal() {
@@ -46,7 +46,7 @@ function addDecimal() {
 
 
 /**
- * [[The function clears the current display,memory and operator]]
+ * The function clears the current display,memory and operator
  */
 
 function allClear() {
@@ -59,7 +59,7 @@ function allClear() {
 // Stores the last operator pushed for multiply, divide, add, or subtract.
 /**
  * Stores operator
- * @param {function} op [[The function stores the operations]]
+ * @param {function} op The function stores the operations
  */
 
 function storeOperator(op) {
@@ -76,7 +76,7 @@ function storeOperator(op) {
 
 // Calculate using operator, the memory and what is current.
 /**
- * [This function uses the operations to solve for an answer]]
+ * This function uses the operations to solve for an answers
  */
 
 function calculate() {
@@ -91,7 +91,7 @@ function calculate() {
     displayCurrentInput();
 }
 /**
- * [[This function makes the inout negative]]
+ * This function makes the inout negative
  */
 
 function changeSign() {
@@ -101,7 +101,7 @@ function changeSign() {
 
 // Clear the current input back to 0
 /**
- * [[This function makes the current value 0]]
+ * This function makes the current value 0
  */
 
 function clearCurrent() {
@@ -149,7 +149,7 @@ function square() {
 
 // Calculate the square root of the current input
 /**
- * [[This function finds the sqaure root of a number]]
+ * This function finds the sqaure root of a number
  */
 
 function squareRoot() {
@@ -159,7 +159,7 @@ function squareRoot() {
 
 // Calculate the inverse of the current input
 /**
- * [[This function finds the inverse of the current input]]
+ * This function finds the inverse of the current input
  */
 
 function inverse() {
@@ -179,7 +179,7 @@ function sine() {
 
 // Return the cosine of a number
 /**
- * [[The function finds the cosine of a number and returns it to the current display
+ * The function finds the cosine of a number and returns it to the current display
  */
 
 function cosine() {
@@ -189,7 +189,7 @@ function cosine() {
 
 // Return the tangent of a number
 /**
- * [[This function finds the tangent of a number and returns it to the current display]]
+ * This function finds the tangent of a number and returns it to the current display
  */
 
 function tangent() {
@@ -199,7 +199,7 @@ function tangent() {
 
 // Return the sine of a number in degrees
 /**
- * [[The function finds the sine of anumber in degrees and returns it to the current display
+ * The function finds the sine of anumber in degrees and returns it to the current display
  */
 
 function sineDegrees() {
