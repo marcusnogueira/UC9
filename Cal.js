@@ -1,4 +1,4 @@
-var currentInput = "0";
+var current_input = "0";
 var memory = "0";
 var operator = 0;
 
@@ -8,7 +8,7 @@ var operator = 0;
  */
 
 function displayCurrentInput() {
-    document.getElementById('screen').value = currentInput;
+    document.getElementById('screen').value = current_input;
 }
 
 
@@ -17,12 +17,12 @@ function displayCurrentInput() {
  */
 
 function addDigit(dig) {
-    if (currentInput.length == 30) {
-        currentInput = currentInput;
-    } else if ((eval(currentInput) == 0) && (currentInput.indexOf(".") == -1)) {
-        currentInput = dig;
+    if (current_input.length == 30) {
+        current_input = current_input;
+    } else if ((eval(current_input) == 0) && (current_input.indexOf(".") == -1)) {
+        current_input = dig;
     } else {
-        currentInput = currentInput + dig;
+        current_input = current_input + dig;
     }
     displayCurrentInput();
 }
@@ -32,13 +32,13 @@ function addDigit(dig) {
  */
 
 function addDecimal() {
-    if (currentInput.length == 0) {
+    if (current_input.length == 0) {
         //no leading ".", use "0."
-        currentInput = "0.";
+        current_input = "0.";
     } else {
         // First make sure one doesn't exist
-        if (currentInput.indexOf(".") == -1) {
-            currentInput = currentInput + ".";
+        if (current_input.indexOf(".") == -1) {
+            current_input = current_input + ".";
         }
     }
     displayCurrentInput();
@@ -50,13 +50,18 @@ function addDecimal() {
  */
 
 function allClear() {
-    currentInput = "0";
+    current_input = "0";
     operator = 0;                //clear operator
     memory = "0";                  //clear memory
     displayCurrentInput();
 }
 
 // Stores the last operator pushed for multiply, divide, add, or subtract.
+/**
+ * Stores operator
+ * @param {function} op [[The function stores the operations]]
+ */
+
 function storeOperator(op) {
     if (op.indexOf("*") > -1) { operator = 1; };       //codes for *
     if (op.indexOf("/") > -1) { operator = 2; };       // slash (divide)
@@ -64,131 +69,195 @@ function storeOperator(op) {
     if (op.indexOf("-") > -1) { operator = 4; };       // difference
     if (op.indexOf("^") > -1) { operator = 5; };       // exponent
 
-    memory = currentInput;                 //store value
-    currentInput = "0";
+    memory = current_input;                 //store value
+    current_input = "0";
     displayCurrentInput();
 }
 
-// Calculate using operator, the memory and what is current
+// Calculate using operator, the memory and what is current.
+/**
+ * [This function uses the operations to solve for an answer]]
+ */
 
 function calculate() {
-    if (operator == 1) { currentInput = eval(memory) * eval(currentInput); };
-    if (operator == 2 && currentInput == 0) { currentInput = "ERROR: Divide by 0"; } else if (operator == 2) { currentInput = eval(memory) / eval(currentInput); };
-    if (operator == 3) { currentInput = eval(memory) + eval(currentInput); };
-    if (operator == 4) { currentInput = eval(memory) - eval(currentInput); };
-    if (operator == 5) { currentInput = Math.pow(memory, currentInput); };
+    if (operator == 1) { current_input = eval(memory) * eval(current_input); };
+    if (operator == 2 && current_input == 0) { current_input = "ERROR: Divide by 0"; } else if (operator == 2) { current_input = eval(memory) / eval(current_input); };
+    if (operator == 3) { current_input = eval(memory) + eval(current_input); };
+    if (operator == 4) { current_input = eval(memory) - eval(current_input); };
+    if (operator == 5) { current_input = Math.pow(memory, current_input); };
 
     operator = 0;                //clear operator
     memory    = "0";              //clear memory
     displayCurrentInput();
 }
+/**
+ * [[This function makes the inout negative]]
+ */
 
 function changeSign() {
-    currentInput = currentInput * -1;
+    current_input = current_input * -1;
     displayCurrentInput();
 }
 
 // Clear the current input back to 0
+/**
+ * [[This function makes the current value 0]]
+ */
+
 function clearCurrent() {
-    currentInput = "0";
+    current_input = "0";
     displayCurrentInput();
 }
 
 // Change the current input to a percentage
+/**
+ * This function makes the current value into a percentage
+ */
+
 function percentage() {
-    currentInput = currentInput / 100;
+    current_input = current_input / 100;
     displayCurrentInput();
 }
 
 // Calculate the factorial of the current input
+/**
+ * This function calculates the factorial of a number
+ */
+
 function factorial() {
-    if (currentInput == 0) {
-        currentInput = 1;
+    if (current_input == 0) {
+        current_input = 1;
     }
-    if (currentInput < 0) {
-        currentInput = "ERROR: Input must be >0";
+    if (current_input < 0) {
+        current_input = "ERROR: Input must be >0";
     }
-    for (var i = currentInput; --i; ) {
-        currentInput = currentInput * i;
+    for (var i = current_input; --i; ) {
+        current_input = current_input * i;
     }
     displayCurrentInput();
 }
 
 // Calculate the square of the current input
+/**
+ * This function squares the current input
+ */
+
 function square() {
-    currentInput = currentInput * currentInput;
+    current_input = current_input * current_input;
     displayCurrentInput();
 }
 
 // Calculate the square root of the current input
+/**
+ * [[This function finds the sqaure root of a number]]
+ */
+
 function squareRoot() {
-    currentInput = Math.sqrt(currentInput);
+    current_input = Math.sqrt(current_input);
     displayCurrentInput();
 }
 
 // Calculate the inverse of the current input
+/**
+ * [[This function finds the inverse of the current input]]
+ */
+
 function inverse() {
-    currentInput = 1 / currentInput;
+    current_input = 1 / current_input;
     displayCurrentInput();
 }
 
 // Return the sine of a number
+/**
+ * This function finds the sine of a number and returns it to the current display
+ */
+
 function sine() {
-    currentInput = Math.sin(currentInput);
+    current_input = Math.sin(current_input);
     displayCurrentInput();
 }
 
 // Return the cosine of a number
+/**
+ * [[The function finds the cosine of a number and returns it to the current display
+ */
+
 function cosine() {
-    currentInput = Math.cos(currentInput);
+    current_input = Math.cos(current_input);
     displayCurrentInput();
 }
 
 // Return the tangent of a number
+/**
+ * [[This function finds the tangent of a number and returns it to the current display]]
+ */
+
 function tangent() {
-    currentInput = Math.tan(currentInput);
+    current_input = Math.tan(current_input);
     displayCurrentInput();
 }
 
 // Return the sine of a number in degrees
+/**
+ * [[The function finds the sine of anumber in degrees and returns it to the current display
+ */
+
 function sineDegrees() {
-    currentInput = Math.sin(currentInput * Math.PI/180);
+    current_input = Math.sin(current_input * Math.PI/180);
     displayCurrentInput();
 }
 
 // Return the cosine of a number in degrees
+/**
+ * This function returns the cosine of a number in degrees and returns it to the current docs
+ */
+
 function cosineDegrees() {
-    currentInput = Math.cos(currentInput * Math.PI/180);
+    current_input = Math.cos(current_input * Math.PI/180);
     displayCurrentInput();
 }
 
 // Return the tangent of a number in degrees
+/**
+ * This function finds the tangent of a number in degrees and returns it to the current display
+ */
+
 function tangentDegrees() {
-    currentInput = Math.tan(currentInput * Math.PI/180);
+    current_input = Math.tan(current_input * Math.PI/180);
     displayCurrentInput();
 }
+/**
+ *  This function clears the memory of the calculator to 0
+ */
 
 function mc() {
     memory = "0";
     displayCurrentInput();
 }
+/**
+ * This function adds a number to the memory
+ */
 
 function mPlus() {
-    memory = eval(memory) + eval(currentInput);
+    memory = eval(memory) + eval(current_input);
     displayCurrentInput();
 }
+/**
+ * This function subtracts a number from the memory
+ */
 
 function mMinus() {
-    memory = eval(memory) - eval(currentInput);
+    memory = eval(memory) - eval(current_input);
     displayCurrentInput();
 }
+/**
+ * This function stores the current input as memory
+ */
 
 function mr() {
-    currentInput = memory;
+    current_input = memory;
     displayCurrentInput();
 }
 
-function changeSign() {
-    currentInput = currentInput * -1;
-    displayCurrentInput();
-}
+
+
