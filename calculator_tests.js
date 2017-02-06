@@ -105,3 +105,16 @@ QUnit.test( "Factorial test", function( assert ) {
     factorial();
     assert.equal(document.getElementById("screen").value, "120", "Passed - Expected 120");
 });
+
+// Test for digit limit
+QUnit.test( "Digit Limit Test", function( assert ) {
+    allClear();
+    // Function to add many digits to the screen
+    function manyDigits(digit, times) {
+        for (i=0; i< times; i++) {
+            addDigit(digit);
+        }
+    }
+    manyDigits('5', 100);
+    assert.equal(document.getElementById("screen").value, "555555555555555555555555555555", "Passed - Expected 30 digits");
+});
