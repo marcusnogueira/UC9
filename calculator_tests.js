@@ -32,8 +32,8 @@ QUnit.test( "Change number into a percentage", function( assert ) {
     assert.equal(document.getElementById("screen").value, "0.42", "Passed - Expected 0.42");
 });
 
-// Square a number
- QUnit.test( "Square a number test", function( assert ) {
+// Sqaure a number
+ QUnit.test( "Sqaure a number test", function( assert ) {
      allClear();
      addDigit('8');
      square();
@@ -49,6 +49,16 @@ QUnit.test( "Find inverse test", function( assert ) {
     assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
 });
 
+
+//Find a square root of a Number
+QUnit.test( " Find the sqaure root of a number", function( assert ){
+    allClear();
+    addDigit('4')
+    addDigit('9')
+    sqaureRoot()
+    assert.equal(document.getElementById("screen").value, "7", "Passes - Expected 7");
+
+})
 
 
 
