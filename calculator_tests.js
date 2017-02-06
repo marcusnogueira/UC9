@@ -31,3 +31,10 @@ QUnit.test( "Change number into a percentage", function( assert ) {
     percentage();
     assert.equal(document.getElementById("screen").value, "0.42", "Passed - Expected 0.42");
 });
+ QUnit.test( "Sqaure A Number", function( assert ) {
+     allClear();
+     addDigit('8');
+     square();
+     assert.equal(document.getElementById("screen").value, "64", "Passed - Expected 64");
+ });
+
