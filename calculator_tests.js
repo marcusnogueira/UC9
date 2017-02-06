@@ -22,3 +22,4 @@ QUnit.test( "Change sign test", function( assert ) {
     changeSign();
     assert.equal(document.getElementById("screen").value, "-2", "Passed - Expected -2");
 });
+
