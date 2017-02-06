@@ -14,3 +14,9 @@ QUnit.test( "Add decimal test", function( assert ) {
 });
 
 
+//Test for changing a number to a percentage
+QUint.test( "Change Number to a percentage", function ( assert ) {
+ current_input=(15) / 100
+    displaycurrent_input
+    assert.equal(document.getElementById("screen").value), "0.15" "Passed - Expected 0.15"
+}
