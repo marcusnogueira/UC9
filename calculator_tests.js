@@ -23,7 +23,7 @@ QUnit.test( "Change sign test", function( assert ) {
     assert.equal(document.getElementById("screen").value, "-2", "Passed - Expected -2");
 });
 
-// Test For changing a nuymber to a percentage
+// Test For changing a number to a percentage
 QUnit.test( "Change number into a percentage", function( assert ) {
     allClear();
     addDigit('4');
@@ -31,6 +31,8 @@ QUnit.test( "Change number into a percentage", function( assert ) {
     percentage();
     assert.equal(document.getElementById("screen").value, "0.42", "Passed - Expected 0.42");
 });
+
+// Sqaure a number
  QUnit.test( "Sqaure A Number", function( assert ) {
      allClear();
      addDigit('8');
@@ -38,3 +40,11 @@ QUnit.test( "Change number into a percentage", function( assert ) {
      assert.equal(document.getElementById("screen").value, "64", "Passed - Expected 64");
  });
 
+
+// Text for finding the inverse of a number
+QUnit.test( "Find inverse test", function( assert ) {
+    allClear();
+    addDigit('5');
+    inverse();
+    assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
+});
