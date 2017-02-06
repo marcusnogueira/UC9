@@ -23,3 +23,11 @@ QUnit.test( "Change sign test", function( assert ) {
     assert.equal(document.getElementById("screen").value, "-2", "Passed - Expected -2");
 });
 
+// Test For changing a nuymber to a percentage
+QUnit.test( "Change number into a percentage", function( assert ) {
+    allClear();
+    addDigit('4');
+    addDigit('2');
+    percentage();
+    assert.equal(document.getElementById("screen").value, "0.42", "Passed - Expected 0.42");
+});
