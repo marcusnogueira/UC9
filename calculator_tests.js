@@ -23,3 +23,10 @@ QUnit.test( "Change sign test", function( assert ) {
     assert.equal(document.getElementById("screen").value, "-2", "Passed - Expected -2");
 });
 
+// Text for finding the inverse of a number
+QUnit.test( "Find inverse test", function( assert ) {
+    allClear();
+    addDigit('5');
+    inverse();
+    assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
+});
