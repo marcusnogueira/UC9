@@ -15,15 +15,6 @@ QUnit.test( "Add decimal test", function( assert ) {
     assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
 });
 
-<<<<<<< HEAD
-
-//Test for changing a number to a percentage
-QUint.test( "Change Number to a percentage", function ( assert ) {
- current_input=(15) / 100
-    displaycurrent_input
-    assert.equal(document.getElementById("screen").value), "0.15" "Passed - Expected 0.15"
-}
-=======
 // Test for changing a number to negative
 QUnit.test( "Change sign test", function( assert ) {
     allClear();
@@ -31,4 +22,3 @@ QUnit.test( "Change sign test", function( assert ) {
     changeSign();
     assert.equal(document.getElementById("screen").value, "-2", "Passed - Expected -2");
 });
->>>>>>> UC10/master
