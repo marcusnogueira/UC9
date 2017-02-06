@@ -12,3 +12,5 @@ QUnit.test( "Add decimal test", function( assert ) {
     addDecimal();
     assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
 });
+
+
