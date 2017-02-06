@@ -118,3 +118,15 @@ QUnit.test( "Digit Limit Test", function( assert ) {
     manyDigits('5', 100);
     assert.equal(document.getElementById("screen").value, "555555555555555555555555555555", "Passed - Expected 30 digits");
 });
+
+// Test clear function
+QUnit.test( "Clear Function", function( assert ) {
+    allClear();
+    addDigit('4');
+    storeOperator('+');
+    addDigit('200');
+    clearCurrent();
+    addDigit('100');
+    calculate();
+    assert.equal(document.getElementById("screen").value, "104", "Passed - Expected 104");
+});
