@@ -55,7 +55,7 @@ QUnit.test( " Find the sqaure root of a number", function( assert ){
     allClear();
     addDigit('4')
     addDigit('9')
-    sqaureRoot()
+    squareRoot()
     assert.equal(document.getElementById("screen").value, "7", "Passes - Expected 7");
 
 })
