@@ -13,4 +13,9 @@ QUnit.test( "Add decimal test", function( assert ) {
     assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
 });
 
-
+// Test for changing a number to negative
+QUnit.test( "Change sign test", function( assert ) {
+    addDigit('2');
+    changeSign();
+    assert.equal(document.getElementById("screen").value, "-2", "Passed - Expected -2");
+});
