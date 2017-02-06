@@ -49,3 +49,49 @@ QUnit.test( "Find inverse test", function( assert ) {
     assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Test for factorials
+QUnit.test( "Factorial test", function( assert ) {
+    allClear();
+    addDigit('5');
+    factorial();
+    assert.equal(document.getElementById("screen").value, "120", "Passed - Expected 120");
+});
