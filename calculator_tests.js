@@ -32,15 +32,6 @@ QUnit.test( "Change number into a percentage", function( assert ) {
     assert.equal(document.getElementById("screen").value, "0.42", "Passed - Expected 0.42");
 });
 
-// Square a number
- QUnit.test( "Sqaure a number test", function( assert ) {
-     allClear();
-     addDigit('8');
-     square();
-     assert.equal(document.getElementById("screen").value, "64", "Passed - Expected 64");
- });
-
-
 // Test for finding the inverse of a number
 QUnit.test( "Find inverse test", function( assert ) {
     allClear();
@@ -49,6 +40,13 @@ QUnit.test( "Find inverse test", function( assert ) {
     assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
 });
 
+// Test for factorials
+QUnit.test( "Factorial test", function( assert ) {
+    allClear();
+    addDigit('5');
+    factorial();
+    assert.equal(document.getElementById("screen").value, "120", "Passed - Expected 120");
+});
 
 //Find a square root of a Number
 QUnit.test( " Find the square root of a number", function( assert ){
@@ -60,51 +58,35 @@ QUnit.test( " Find the square root of a number", function( assert ){
 
 })
 
+// Square a number
+ QUnit.test( "Sqaure a number test", function( assert ) {
+     allClear();
+     addDigit('8');
+     square();
+     assert.equal(document.getElementById("screen").value, "64", "Passed - Expected 64");
+ });
 
+// Test clear function
+QUnit.test( "Clear Function", function( assert ) {
+    allClear();
+    addDigit('4');
+    storeOperator('+');
+    addDigit('200');
+    clearCurrent();
+    addDigit('100');
+    calculate();
+    assert.equal(document.getElementById("screen").value, "104", "Passed - Expected 104");
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Test for factorials
-QUnit.test( "Factorial test", function( assert ) {
+// Test for divide by 0 error
+QUnit.test( "Divide by Zero Test", function( assert ) {
     allClear();
     addDigit('5');
-    factorial();
-    assert.equal(document.getElementById("screen").value, "120", "Passed - Expected 120");
-});
+    storeOperator('/');
+    addDigit('0');
+    calculate();
+    assert.equal(document.getElementById("screen").value, "ERROR: Divide by 0", "Passed - Expected ERROR: Divide by 0")
+})
 
 // Test for digit limit
 QUnit.test( "Digit Limit Test", function( assert ) {
@@ -119,14 +101,3 @@ QUnit.test( "Digit Limit Test", function( assert ) {
     assert.equal(document.getElementById("screen").value, "555555555555555555555555555555", "Passed - Expected 30 digits");
 });
 
-// Test clear function
-QUnit.test( "Clear Function", function( assert ) {
-    allClear();
-    addDigit('4');
-    storeOperator('+');
-    addDigit('200');
-    clearCurrent();
-    addDigit('100');
-    calculate();
-    assert.equal(document.getElementById("screen").value, "104", "Passed - Expected 104");
-});
